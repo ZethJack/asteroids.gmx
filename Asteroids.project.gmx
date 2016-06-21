@@ -15,6 +15,7 @@
   <objects name="objects">
     <object>objects\obj_ship</object>
     <object>objects\obj_bullet</object>
+    <object>objects\obj_asteroid</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game</room>
