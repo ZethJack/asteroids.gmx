@@ -52,7 +52,13 @@ if (keyboard_check_pressed(vk_space))
 if (speed &gt; 5) speed = 5;
 
 // speed constraint
-speed = max(speed-0.01, 0)
+speed = max(speed-0.01, 0);
+
+//debug
+if (keyboard_check(ord("R")))
+{
+    game_restart();
+}
 </string>
           </argument>
         </arguments>
