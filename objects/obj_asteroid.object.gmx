@@ -29,6 +29,7 @@
 image_index = irandom(3);
 direction = random(360);
 speed = 0.5 + random(2);
+rotation_spd = -2 + random(5);
 </string>
           </argument>
         </arguments>
@@ -76,6 +77,7 @@ instance_create(x, y, obj_asteroid_s);
           <argument>
             <kind>1</kind>
             <string>move_wrap(true,true,sprite_width/2);
+image_angle = image_angle + rotation_spd;
 </string>
           </argument>
         </arguments>
