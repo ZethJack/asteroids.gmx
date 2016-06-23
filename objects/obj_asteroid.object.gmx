@@ -100,7 +100,8 @@ image_angle = image_angle + rotation_spd;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
+            <string>global.points = global.points + 50;
+instance_destroy();
 
 with obj_bullet
 {
