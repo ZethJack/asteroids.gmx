@@ -10,6 +10,8 @@
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_asteroid</sprite>
     <sprite>sprites\spr_asteroid_s</sprite>
+    <sprite>sprites\spr_ufo</sprite>
+    <sprite>sprites\spr_ufo_bullet</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
