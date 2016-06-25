@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>global.points = 0;
+//debug variables
+global.max_asteroids = 4;
 </string>
           </argument>
         </arguments>
@@ -48,10 +50,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//debug
+            <string>//Restart game
 if (keyboard_check(ord("R")))
 {
     game_restart();
+}
+
+//Asteroid Spawner
+if (!instance_exists(obj_asteroid) &amp;&amp; !instance_exists(obj_asteroid_s))
+{
+    var i;
+    for (i = 0; i &lt; global.max_asteroids; i += 1)
+    {
+        instance_create(random(room_width), random(room_height), obj_asteroid);
+    }
+    global.max_asteroids += 1;
 }
 </string>
           </argument>
@@ -77,6 +90,7 @@ if (keyboard_check(ord("R")))
             <kind>1</kind>
             <string>draw_set_colour(c_white);
 draw_text(64, 32, global.points);
+draw_text(64, 44, "(debug)max asteroids= " + string(global.max_asteroids-1) + "#(debug) Asteroid count " + string(instance_number(obj_asteroid)));
 </string>
           </argument>
         </arguments>

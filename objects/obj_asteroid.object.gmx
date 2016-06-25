@@ -25,7 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0;
+            <string>while (place_meeting(x,y,obj_ship))
+{
+    x = random(room_width);
+    y = random(room_height);
+}
+
+image_speed = 0;
+image_index = irandom(3);
+direction = random(360);
+speed = 0.5 + random(2);
+rotation_spd = -2 + random(5);
+
+image_speed = 0;
 image_index = irandom(3);
 direction = random(360);
 speed = 0.5 + random(2);
@@ -102,6 +114,7 @@ image_angle = image_angle + rotation_spd;
             <kind>1</kind>
             <string>global.points = global.points + 50;
 instance_destroy();
+audio_play_sound(snd_die, 0,0);
 
 with obj_bullet
 {
@@ -129,8 +142,7 @@ with obj_bullet
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
-with obj_ship
+            <string>with obj_ship
 {
     instance_destroy();
     audio_play_sound(snd_die, 0,0);
