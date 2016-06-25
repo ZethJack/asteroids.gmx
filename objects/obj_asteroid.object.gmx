@@ -130,17 +130,35 @@ with obj_bullet
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with obj_ship
+            <string>var randomangle = random(360);
+var o;
+
+o = instance_create(x, y, obj_debris);
+o.angle = 30 + randomangle;
+o.image_yscale = (image_yscale/2);
+o = instance_create(x, y, obj_debris);
+o.angle = 330 + randomangle;
+o.image_yscale = (image_yscale/2);
+o = instance_create(x, y, obj_debris);
+o.angle = 120 + randomangle;
+o = instance_create(x, y, obj_debris);
+o.angle = 240 + randomangle;
+
+with obj_debris
 {
-    instance_destroy();
-    audio_play_sound(snd_die, 0,0);
+    direction = angle;
+    image_angle = angle;
+    speed = 3;
 }
+
+audio_play_sound(snd_die, 10,0);
+instance_destroy();
 </string>
           </argument>
         </arguments>
