@@ -54,6 +54,7 @@ instance_destroy();
 with obj_bullet
 {
     instance_destroy();
+    audio_play_sound(snd_die, 0,0);
 }
 </string>
           </argument>
