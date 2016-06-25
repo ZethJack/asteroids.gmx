@@ -25,17 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>while (place_meeting(x,y,obj_ship))
+            <string>while (distance_to_object(obj_ship) &lt; 100)
 {
     x = random(room_width);
     y = random(room_height);
 }
-
-image_speed = 0;
-image_index = irandom(3);
-direction = random(360);
-speed = 0.5 + random(2);
-rotation_spd = -2 + random(5);
 
 image_speed = 0;
 image_index = irandom(3);
