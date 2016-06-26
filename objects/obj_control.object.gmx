@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>global.points = 0;
-//debug variables
 global.max_asteroids = 4;
+global.life = 2;
 </string>
           </argument>
         </arguments>
@@ -64,14 +64,14 @@ if (!instance_exists(obj_asteroid) &amp;&amp; !instance_exists(obj_asteroid_s))
     {
         instance_create(random(room_width), random(room_height), obj_asteroid);
     }
-    global.max_asteroids += 1;
+    global.max_asteroids += 4; //How many asteroids get added next time they get spawned.
 }
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -89,8 +89,10 @@ if (!instance_exists(obj_asteroid) &amp;&amp; !instance_exists(obj_asteroid_s))
           <argument>
             <kind>1</kind>
             <string>draw_set_colour(c_white);
-draw_text(64, 32, global.points);
-draw_text(64, 44, "(debug)max asteroids= " + string(global.max_asteroids-1) + "#(debug) Asteroid count " + string(instance_number(obj_asteroid)));
+draw_set_font(fnt_small);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_text(64, 32, "Score: " + string(global.points) + "#Lives: " + string(global.life));
 </string>
           </argument>
         </arguments>

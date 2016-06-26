@@ -21,6 +21,7 @@
   <paths name="paths"/>
   <fonts name="fonts">
     <font>fonts\fnt_small</font>
+    <font>fonts\fnt_large</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_ship</object>
@@ -29,6 +30,7 @@
     <object>objects\obj_asteroid_s</object>
     <object>objects\obj_control</object>
     <object>objects\obj_debris</object>
+    <object>objects\obj_gameover</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game</room>
