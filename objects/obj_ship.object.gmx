@@ -88,9 +88,9 @@ if (keyboard_check(vk_up))
 {
     if (sprite_index = spr_ship)
     {
-        image_speed = 1;
+        image_speed = 0.5;
     }
-    motion_add(image_angle, 0.5);
+    motion_add(image_angle, 0.2);
 }
 if (keyboard_check_released(vk_up) &amp;&amp; sprite_index = spr_ship)
 {
@@ -108,7 +108,7 @@ if (keyboard_check_pressed(vk_space))
     audio_play_sound(snd_shoot, 0,0);
 }
 
-if (speed &gt; 5) speed = 5;
+if (speed &gt; 4) speed = 4;
 
 // speed constraint
 speed = max(speed-0.01, 0);
