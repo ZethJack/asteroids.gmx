@@ -92,7 +92,6 @@ if (!instance_exists(obj_asteroid) &amp;&amp; !instance_exists(obj_asteroid_s))
 draw_set_font(fnt_small);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
-<<<<<<< HEAD
 draw_text(64, 32, string(global.points));
 //Draw Lives
 var i;
@@ -103,9 +102,7 @@ for (i=0; i &lt; global.life; i++)
     yPos = 64;
     draw_sprite(spr_life_icon, 0, xPos + gapSize, yPos);
 }
-=======
 draw_text(64, 32, "Score: " + string(global.points) + "#Lives: " + string(global.life));
->>>>>>> parent of bfbfc59... Replaced numbers with sprites for lifes.
 </string>
           </argument>
         </arguments>
