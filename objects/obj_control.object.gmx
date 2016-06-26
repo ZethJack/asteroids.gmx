@@ -66,6 +66,8 @@ if (!instance_exists(obj_asteroid) &amp;&amp; !instance_exists(obj_asteroid_s))
     }
     global.max_asteroids += 4; //How many asteroids get added next time they get spawned.
 }
+
+
 </string>
           </argument>
         </arguments>
@@ -92,7 +94,13 @@ if (!instance_exists(obj_asteroid) &amp;&amp; !instance_exists(obj_asteroid_s))
 draw_set_font(fnt_small);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
-draw_text(64, 32, "Score: " + string(global.points) + "#Lives: " + string(global.life));
+draw_text(64, 32, string(global.points));
+//Draw Lives
+var i;
+for (i=0; i &lt; global.life; i++)
+{
+    draw_sprite(spr_life_icon, 0, 72 + 18*i, 64);
+}
 </string>
           </argument>
         </arguments>
