@@ -28,7 +28,7 @@
             <string>global.points = 0;
 global.max_asteroids = 4;
 global.life = 2;
-alarm[0] = room_speed * 60;
+alarm[0] = room_speed * 30;
 </string>
           </argument>
         </arguments>
@@ -54,11 +54,11 @@ alarm[0] = room_speed * 60;
             <string>if (!instance_exists(obj_ufo))
 {
     instance_create(-32, random(room_height - sprite_height), obj_ufo);
-    alarm[0] = room_speed * 60;
+    alarm[0] = room_speed * 30;
 }
 else
 {
-    alarm[0] = room_speed * 60;
+    alarm[0] = room_speed * 30;
 }
 </string>
           </argument>
