@@ -39,7 +39,6 @@
     <object>objects\obj_ufo</object>
     <object>objects\obj_enemy_bullet</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_game</room>
   </rooms>
