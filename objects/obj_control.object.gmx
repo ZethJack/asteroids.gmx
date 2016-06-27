@@ -28,6 +28,38 @@
             <string>global.points = 0;
 global.max_asteroids = 4;
 global.life = 2;
+alarm[0] = room_speed * 2;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!instance_exists(obj_ufo))
+{
+    instance_create(-32, random(room_height - sprite_height), obj_ufo);
+    alarm[0] = room_speed * 60;
+}
+else
+{
+    alarm[0] = room_speed * 60;
+}
 </string>
           </argument>
         </arguments>
@@ -102,7 +134,6 @@ for (i=0; i &lt; global.life; i++)
     yPos = 64;
     draw_sprite(spr_life_icon, 0, xPos + gapSize, yPos);
 }
-draw_text(64, 32, "Score: " + string(global.points) + "#Lives: " + string(global.life));
 </string>
           </argument>
         </arguments>
