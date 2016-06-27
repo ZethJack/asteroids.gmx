@@ -13,6 +13,7 @@
     <sprite>sprites\spr_ship_i</sprite>
     <sprite>sprites\spr_debris</sprite>
     <sprite>sprites\spr_bullet</sprite>
+    <sprite>sprites\spr_life_icon</sprite>
     <sprite>sprites\spr_asteroid</sprite>
     <sprite>sprites\spr_asteroid_s</sprite>
     <sprite>sprites\spr_ufo</sprite>
@@ -20,6 +21,9 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_player_death.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_small</font>
     <font>fonts\fnt_large</font>
@@ -32,7 +36,10 @@
     <object>objects\obj_control</object>
     <object>objects\obj_debris</object>
     <object>objects\obj_gameover</object>
+    <object>objects\obj_ufo</object>
+    <object>objects\obj_enemy_bullet</object>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_game</room>
   </rooms>
